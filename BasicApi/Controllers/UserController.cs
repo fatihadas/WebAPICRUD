@@ -76,6 +76,7 @@ namespace BasicApi.Controllers
             try
             {
                 var result = new HttpResponseMessage(HttpStatusCode.OK);
+                user.CreatedDate = DateTime.Now;
                 db.Users.Add(user);
                 db.SaveChanges();
                 return result;
