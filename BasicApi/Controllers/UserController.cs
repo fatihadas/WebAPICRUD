@@ -10,12 +10,11 @@ using System.Net.Http.Headers;
 
 namespace BasicApi.Controllers
 {
-    [RoutePrefix("api/product")]
-    public class ProductController : ApiController
+    [RoutePrefix("api/user")]
+    public class UserController : ApiController
     {
         private UserContext db = new UserContext();
-
-
+        
         [HttpGet]
         [Route("findall")]
         public HttpResponseMessage findAll()
